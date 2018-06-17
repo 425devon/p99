@@ -4,11 +4,6 @@ const Table = require('cli-table');
 
 module.exports = async (itemArray) =>{
     const spinner = ora().start();
-    // let table = new Table({
-    //     head: ['Item Name', 'Type', 'Slot', 'AC', 'STA', 'INT', 'WT', 'Size', 'Class', 'Race']
-    //   , colWidths: [25,25,10,5,5,5]
-    // });
-
     const getData = async (items) => {
         let objArray = [];
         for (let i = 0; i < items.length; i++) {
@@ -20,7 +15,6 @@ module.exports = async (itemArray) =>{
     }
 
     const tableBuilder = (data) =>{
-        // spinner.start();
         for(let obj in data){
             let tableConstructor = {head:[], colWidths:[]};
             let tableData = [];
