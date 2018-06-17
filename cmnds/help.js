@@ -7,7 +7,14 @@ const menus = {
       help ............... show help menu for a command`,
   
     search: `
-      c99 search <options>`,
+      c99 search {item name} <options>
+      -auction, -a .... include auction data if any
+      -limit, -l {number} .... limits auction data to {x} most recent
+      
+      EXAMPLE:
+      
+      c99 search flowing black robe -al 10`
+      ,
   }
   
   module.exports = (args) => {
