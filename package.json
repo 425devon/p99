@@ -2,11 +2,23 @@
   "name": "c99",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "c99": "bin/c99"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/425devon/c99.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/425devon/c99/issues"
+  },
+  "homepage": "https://github.com/425devon/c99#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "minimist": "^1.2.0",
+    "ora": "^2.1.0"
+  }
 }
