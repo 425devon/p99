@@ -1,4 +1,5 @@
 const minimist = require('minimist');
+const allItems = require('./static/allItems');
 
 module.exports = () => {
     console.log(`
@@ -14,13 +15,14 @@ module.exports = () => {
   $$ |                                                                                
   \\__|                                                      
     `);
-    const args = minimist(process.argv.slice(2));
+    
+    let args = minimist(process.argv.slice(2));
     let cmd = args._[0] || 'help';
 
     //Cleaning for search terms with multiple words
-    if(args._.length > 2){
-        let wordsArray = args._.slice(1)
-        cmd = wordsArray.join('_')
+    if(args._[0] == 'search' && args._.length > 2){
+        let itemName = args._.slice(1).join('_');
+        args = { _: [ 'search', itemName ] }
     }
     
 
