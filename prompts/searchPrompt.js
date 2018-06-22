@@ -17,8 +17,9 @@ function searchItem(answers, input) {
   });
 }
 
-module.exports = {
-  searchPrompt: new Promise((resolve, reject) => {
+
+function searchPrompt(){
+  return new Promise((resolve, reject) => {
     inquirer.prompt([
   {
       type: 'autocomplete',
@@ -38,3 +39,11 @@ module.exports = {
     });
   })
 } 
+
+module.exports = searchPrompt;
+
+
+
+
+  
+
