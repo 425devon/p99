@@ -17,22 +17,22 @@ function searchItem(answers, input) {
   });
 }
 
-inquirer.prompt([
+module.exports = new Promise((resolve, reject) => {
+  inquirer.prompt([
 {
-  type: 'autocomplete',
-  name: 'item',
-  suggestOnly: true,
-  message: 'What are you searching for?',
-  source: searchItem,
-  pageSize: 3,
-  validate: function(val) {
-    return val
-      ? true
-      : 'Type something!';
+    type: 'autocomplete',
+    name: 'item',
+    suggestOnly: true,
+    message: 'What are you searching for?',
+    source: searchItem,
+    pageSize: 3,
+    validate: function(val) {
+      return val
+        ? true
+        : 'Type something!';
+    }
   }
-}
-]).then(function(answers) {
-console.log(JSON.stringify(answers, null, 2));
-});
-
-module.exports = searchItem;
+  ]).then(function(answers) {
+    resolve(answers)
+  });
+})
