@@ -49,11 +49,8 @@ const searchItem = require('./test');
 //         console.error(`"${cmd}" is not a valid command!`)
 //         break;
 //     }
-
-const testSearch = async () =>{
-    const item = await searchItem();
-    console.log(item);
-}
-
-testSearch();
 // }
+
+searchItem.then((item) => {
+    console.log(item)
+}).catch(err => console.log(err));
