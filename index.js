@@ -49,8 +49,10 @@ module.exports = () => {
         console.error(`"${cmd}" is not a valid command!`)
         break;
     }
+
+    // searchItem().then((item) => {
+    //     console.log(item)
+    // }).catch(err => console.log(err));
 }
 
-// searchItem.searchPrompt.then((item) => {
-//     console.log(item)
-// }).catch(err => console.log(err));
+
