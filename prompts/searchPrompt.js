@@ -24,7 +24,7 @@ function searchPrompt(){
   {
       type: 'autocomplete',
       name: 'item',
-      suggestOnly: true,
+      suggestOnly: false,
       message: 'What are you searching for?',
       source: searchItem,
       pageSize: 3,
@@ -34,9 +34,10 @@ function searchPrompt(){
           : 'Type something!';
       }
     }
-    ]).then(function(answers) {
+    ])
+    .then(function(answers) {
       resolve(answers)
-    });
+    })
   })
 } 
 
