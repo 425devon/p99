@@ -1,4 +1,3 @@
-const minimist = require('minimist');
 const mainMenu = require('./prompts/promptHandler')
 
 module.exports = () => {
@@ -18,4 +17,3 @@ module.exports = () => {
 
     mainMenu();
 }
-
