@@ -10,9 +10,9 @@ module.exports = async () =>{
         const searchItem = await search();
         require('../cmnds/search')(searchItem['item'])
         break;
-        // case 'help':
-        // require('../cmnds/help')(args)
-        // break;
+        case 'Get help':
+        require('../cmnds/help')
+        break;
         case 'See version':
         require('../cmnds/version')
         break;
