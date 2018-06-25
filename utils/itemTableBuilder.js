@@ -1,8 +1,9 @@
-const ora = require('ora')
-const itemData = require('./itemData')
+const ora = require('ora');
+const itemData = require('./itemData');
 const Table = require('cli-table');
-const auction = require('../prompts/auctionPrompts')
+const auction = require('../prompts/auctionPrompts');
 const menu = require('../prompts/promptHandler');
+const auctionData = require('../utils/auctionTableBuilder');
 
 module.exports = async (itemArray) =>{
     const spinner = ora().start();
@@ -36,7 +37,22 @@ module.exports = async (itemArray) =>{
         auction.seeAuction().then((answer)=>{ 
             if(answer.seeAuction){
                 auction.getAuction().then((res)=>{
-                    console.log(`returned this ${res.getAuction}`)
+                    let cmd = res.getAuction;
+
+                    switch(cmd){
+                        case 'Last 5':
+                        auctionData(itemArray,5)
+                        break;
+                        case 'Last 15':
+                        auctionData(itemArray,15)
+                        break;
+                        case 'All data':
+                        auctionData(itemArray,0)
+                        break;
+                        case 'nvm...':
+                        menu()
+                        break;
+                    }
                 })
             }else{
                 menu();
