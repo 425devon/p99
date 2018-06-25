@@ -6,7 +6,6 @@ const mainMenu = require('../prompts/promptHandler');
 module.exports = async (item) => {
   const spinner = ora().start()
 
-
   try {
     const search = await getSearch(item)
 
