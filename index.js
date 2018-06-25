@@ -1,4 +1,4 @@
-const mainMenu = require('./prompts/promptHandler')
+const promptHandler = require('./prompts/promptHandler')
 
 module.exports = () => {
     console.log(`
@@ -15,5 +15,5 @@ module.exports = () => {
   \\__|
     `);
 
-    mainMenu();
+    promptHandler();
 }
