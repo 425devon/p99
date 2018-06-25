@@ -1,6 +1,8 @@
 const ora = require('ora')
 const itemData = require('./itemData')
 const Table = require('cli-table');
+const auction = require('../prompts/auctionPrompts')
+const menu = require('../prompts/promptHandler');
 
 module.exports = async (itemArray) =>{
     const spinner = ora().start();
@@ -29,6 +31,19 @@ module.exports = async (itemArray) =>{
         table.push(tableData)
         spinner.stop();
         console.log(table.toString());
+        //Call auction prompt once item table is displayed
+        //Todo find a better way to modularize this
+        auction.seeAuction().then((answer)=>{ 
+            if(answer.seeAuction){
+                auction.getAuction().then((res)=>{
+                    console.log(`returned this ${res.getAuction}`)
+                })
+            }else{
+                menu();
+            }
+        });
+
     }
     getData(itemArray);
 }
+
