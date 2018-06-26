@@ -12,8 +12,7 @@ module.exports = (itemArray, limit) =>{
 
     const getData = async (items) => {
         try{
-            for (let i = 0; i < items.length; i++) {
-            const result = await auctionData(items[i]._id, items[i].NAME)
+            const result = await auctionData(items[0]._id, items[0].NAME)
                 if(result.auctions.length == 0){
                     console.log(`no auction data available for ${items[0].NAME}`)
                     menu();
@@ -23,7 +22,6 @@ module.exports = (itemArray, limit) =>{
                 }else{
                     tableBuilder(result.auctions.reverse());
                 }
-            }
             spinner.stop();
         }catch(error){
             console.log(error);
