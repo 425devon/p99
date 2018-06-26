@@ -31,8 +31,6 @@ module.exports = async (itemArray) =>{
         table.push(tableData)
         spinner.stop();
         console.log(table.toString());
-        //Call auction prompt once item table is displayed
-        //Todo find a better way to modularize this
         auctionHandler(itemArray);
          
 
