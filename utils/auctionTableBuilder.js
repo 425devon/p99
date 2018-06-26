@@ -25,6 +25,7 @@ module.exports = (itemArray, limit) =>{
             spinner.stop();
         }catch(error){
             console.log(error);
+            process.exit(1);
         }
     }
 
@@ -38,6 +39,7 @@ module.exports = (itemArray, limit) =>{
             console.log(table.toString());
         }catch(error){
             console.log(error);
+            process.exit(1);
         }
     }
     getData(itemArray);
