@@ -1,9 +1,7 @@
 const ora = require('ora');
 const itemData = require('./itemData');
 const Table = require('cli-table');
-const auction = require('../prompts/auctionPrompts');
-const menu = require('../prompts/promptHandler');
-const auctionData = require('../utils/auctionTableBuilder');
+const auctionHandler = require('../utils/auctionHandler')
 
 module.exports = async (itemArray) =>{
     const spinner = ora().start();
@@ -12,7 +10,8 @@ module.exports = async (itemArray) =>{
         tableBuilder(result)
         spinner.stop();
     }
-
+    //Todo change to vertical tables
+    //to reduce sizing wrap issues
     const tableBuilder = (data) =>{
         let tableConstructor = {head:[], colWidths:[]};
         let tableData = [];
@@ -34,30 +33,8 @@ module.exports = async (itemArray) =>{
         console.log(table.toString());
         //Call auction prompt once item table is displayed
         //Todo find a better way to modularize this
-        auction.seeAuction().then((answer)=>{ 
-            if(answer.seeAuction){
-                auction.getAuction().then((res)=>{
-                    let cmd = res.getAuction;
-
-                    switch(cmd){
-                        case 'Last 5':
-                        auctionData(itemArray,5)
-                        break;
-                        case 'Last 15':
-                        auctionData(itemArray,15)
-                        break;
-                        case 'All data':
-                        auctionData(itemArray,0)
-                        break;
-                        case 'nvm...':
-                        menu()
-                        break;
-                    }
-                })
-            }else{
-                menu();
-            }
-        });
+        auctionHandler(itemArray);
+         
 
     }
     getData(itemArray);
