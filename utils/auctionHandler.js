@@ -21,6 +21,9 @@ module.exports = async (itemArray) => {
                     case 'nvm...':
                     menu()
                     break;
+                    default:
+                    menu()
+                    break;
                 }
             })
         }else{
