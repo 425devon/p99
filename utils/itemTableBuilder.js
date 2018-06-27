@@ -32,8 +32,6 @@ module.exports = async (itemArray) =>{
         spinner.stop();
         console.log(table.toString());
         auctionHandler(itemArray);
-         
-
     }
     getData(itemArray);
 }
