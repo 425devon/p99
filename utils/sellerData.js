@@ -5,8 +5,9 @@ module.exports = async (name, token) =>{
         token = token || '';
 
         const response = await axios.get(`https://p99market.com/api/seller/${name}/${token}`);
-        console.log(response.data);
+        return(response.data.data);
       } catch (error) {
         console.error(error);
+        process.exit(1);
       }
 }
