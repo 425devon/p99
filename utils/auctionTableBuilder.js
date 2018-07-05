@@ -14,6 +14,7 @@ module.exports = (itemArray, limit) =>{
         try{
             const result = await auctionData(items[0]._id, items[0].NAME)
                 if(result.auctions.length == 0){
+                    //todo chalk red for visibility
                     console.log(`no auction data available for ${items[0].NAME}`)
                     menu();
                 }else
