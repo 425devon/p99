@@ -11,6 +11,7 @@ module.exports = async (id) =>{
         return response.data.data.item;
       } catch (error) {
         console.error(error);
+        process.exit(1);
       }
 
 }
