@@ -6,7 +6,7 @@ module.exports ={
     const questions = [
         {
             name: 'menuChoice',
-            type: 'rawlist',
+            type: 'list',
             message: `Please choose from the following:`,
             choices:['Search for item','Search auctions by seller','See version','Get help', 'Exit'],
             default: 0,
