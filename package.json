@@ -1,6 +1,6 @@
 {
   "name": "c99",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "bin": {
     "c99": "bin/c99"

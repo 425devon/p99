@@ -1,6 +1,6 @@
 const ora = require('ora')
 const auctionData = require('./auctionData')
-const menu = require('../prompts/promptHandler');
+const menu = require('../../prompts/promptHandler');
 const Table = require('cli-table');
 
 module.exports = (itemArray, limit) =>{
@@ -14,6 +14,7 @@ module.exports = (itemArray, limit) =>{
         try{
             const result = await auctionData(items[0]._id, items[0].NAME)
                 if(result.auctions.length == 0){
+                    //todo chalk red for visibility
                     console.log(`no auction data available for ${items[0].NAME}`)
                     menu();
                 }else
@@ -31,12 +32,13 @@ module.exports = (itemArray, limit) =>{
 
     const tableBuilder = (data) =>{
         spinner.start();
-        for(let obj in data){
-            table.push([data[obj].name, data[obj].price, data[obj].date, data[obj].sellerName])
+        for(let obj of data){
+            table.push([obj.name, obj.price, obj.date, obj.sellerName])
         }
         spinner.stop();
         try{
             console.log(table.toString());
+            menu();
         }catch(error){
             console.log(error);
             process.exit(1);

@@ -1,6 +1,6 @@
-const auction = require('../prompts/auctionPrompts');
-const auctionData = require('../utils/auctionTableBuilder');
-const menu = require('../prompts/promptHandler');
+const auction = require('../../prompts/auctionPrompts');
+const auctionData = require('./auctionTableBuilder');
+const menu = require('../../prompts/promptHandler');
 
 module.exports = async (itemArray) => {
     auction.seeAuction().then((answer)=>{ 

@@ -1,7 +1,7 @@
 const ora = require('ora');
 const itemData = require('./itemData');
 const Table = require('cli-table');
-const auctionHandler = require('../utils/auctionHandler')
+const auctionHandler = require('../auction/auctionHandler')
 
 module.exports = async (itemArray) =>{
     const spinner = ora().start();

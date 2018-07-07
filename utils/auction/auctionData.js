@@ -9,6 +9,7 @@ module.exports = async (id, name) =>{
         return response.data.data;
       } catch (error) {
         console.error(error);
+        process.exit(1);
       }
 
 }
