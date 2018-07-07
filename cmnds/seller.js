@@ -3,11 +3,11 @@ const sellerData = require('../utils/seller/sellerData');
 const mainMenu = require('../prompts/promptHandler');
 const sellerTable = require('../utils/seller/sellerTableBuilder')
 
-module.exports = async (name) => {
+module.exports = async (name, token) => {
     const spinner = ora().start()
-  
+    token = token || '';
     try {
-        const data = await sellerData(name);
+        const data = await sellerData(name, token);
         if(data.data.length == 0){
             //todo chalk red for visibility
             spinner.stop();
