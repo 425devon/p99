@@ -38,6 +38,7 @@ module.exports = (itemArray, limit) =>{
         spinner.stop();
         try{
             console.log(table.toString());
+            menu();
         }catch(error){
             console.log(error);
             process.exit(1);
