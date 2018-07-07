@@ -1,7 +1,7 @@
 const ora = require('ora');
-const sellerData = require('../utils/sellerData');
+const sellerData = require('../utils/seller/sellerData');
 const mainMenu = require('../prompts/promptHandler');
-const sellerTable = require('../utils/sellerTableBuilder')
+const sellerTable = require('../utils/seller/sellerTableBuilder')
 
 module.exports = async (name) => {
     const spinner = ora().start()

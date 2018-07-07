@@ -1,6 +1,6 @@
 const ora = require('ora');
-const getSearch = require('../utils/search');
-const itemTableBuilder = require('../utils/itemTableBuilder');
+const getSearch = require('../utils/search/search');
+const itemTableBuilder = require('../utils/item/itemTableBuilder');
 const mainMenu = require('../prompts/promptHandler');
 
 module.exports = async (item) => {
