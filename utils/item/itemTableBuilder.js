@@ -10,29 +10,17 @@ module.exports = async (itemArray) =>{
         tableBuilder(result)
         spinner.stop();
     }
-    //Todo change to vertical tables
-    //to reduce sizing wrap issues
-    const tableBuilder = (data) =>{
-        let tableConstructor = {head:[], colWidths:[]};
-        let tableData = [];
 
-        for(let key in data){
-            tableConstructor.head.push(key)
-            if(key == 'NAME' || key == 'TYPE' || key == 'CLASS' || key == 'RACE'){
-                tableConstructor.colWidths.push(25)
-            }else if(key == 'SLOT' || key == 'SIZE'){
-                tableConstructor.colWidths.push(10)
-            }else{
-                tableConstructor.colWidths.push(5)
-            }
-            tableData.push(data[key])
+    const tableBuilder = (data) =>{
+        let table = new Table();
+        for(const key in data){
+            table.push({[key]:data[key]})
         }
-        let table = new Table(tableConstructor);
-        table.push(tableData)
         spinner.stop();
         console.log(table.toString());
         auctionHandler(itemArray);
     }
     getData(itemArray);
 }
+
 
