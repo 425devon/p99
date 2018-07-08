@@ -7,7 +7,6 @@ module.exports = (itemArray, limit) =>{
     const spinner = ora().start();
     let table = new Table({
         head: ['Item Name', 'Price', 'Date', 'Seller']
-      , colWidths: [25,10,15,25]
     });
 
     const getData = async (items) => {
