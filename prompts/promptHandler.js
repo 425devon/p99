@@ -19,7 +19,7 @@ module.exports = async () =>{
         require('../cmnds/help')
         break;
         case 'See version':
-        require('../cmnds/version')
+        require('../cmnds/version')();
         break;
         case 'Exit':
         //todo chalk red
