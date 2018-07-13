@@ -11,7 +11,6 @@ module.exports = async (sellerData) =>{
     }
     const table = new Table({
         head: ['Seller', 'Item Name', 'Price', 'Date'],
-        colWidths: [25,40,15,15]
     });
     const token = sellerData.pageToken || '';
     const name = sellerData.data[0].sellerName;
