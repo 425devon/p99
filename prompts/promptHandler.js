@@ -23,7 +23,7 @@ module.exports = async () =>{
         break;
         case 'Exit':
         //todo chalk red
-        console.log("Now exiting c99...")
+        console.log("Now exiting p99...")
         process.exit(0)
         break;
         default:
