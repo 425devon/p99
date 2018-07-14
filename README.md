@@ -2,6 +2,10 @@
 
 The official CLI for www.P99market.com
 
+<p align="center">
+  <img src="./static/images/c99Menu.png" alt="Main menu example">
+</p>
+
 ### Installing
 Simply, install `c99`:
 
