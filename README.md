@@ -1,4 +1,4 @@
-# c99
+# p99
 
 The official CLI for www.P99market.com
 
@@ -7,24 +7,24 @@ The official CLI for www.P99market.com
 </p>
 
 ## Description
-c99 provides a clean and efficient command line interface for:
+p99 provides a clean and efficient command line interface for:
 * Auto-completed search for items
 * Current auction data for items
 * Search auctions by seller
 
 
 ## Installing
-Simply, install `c99` with the node package manager:
+Simply, install `p99` with the node package manager:
 
 ```sh
-$ npm install c99
+$ npm install p99
 ```
 
 
 ## Usage
-Once installed use the command c99 to launch the interface.
+Once installed use the command p99 to launch the interface.
 ```sh
-$ c99
+$ p99
 ```
 <p align="center">
   <img src="./static/images/c99menuClean.png" alt="c99 logo">
