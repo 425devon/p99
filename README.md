@@ -17,7 +17,7 @@ p99 provides a clean and efficient command line interface for:
 Simply, install `p99` with the node package manager:
 
 ```sh
-$ npm install p99
+$ npm install -g p99
 ```
 
 
