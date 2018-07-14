@@ -1,4 +1,4 @@
-# c99
+# p99
 
 The official CLI for www.P99market.com
 
@@ -6,67 +6,56 @@ The official CLI for www.P99market.com
   <img src="./static/images/c99Logo.png" alt="c99 logo">
 </p>
 
-### Installing
-Simply, install `c99`:
+## Description
+p99 provides a clean and efficient command line interface for:
+* Auto-completed search for items
+* Current auction data for items
+* Search auctions by seller
+
+
+## Installing
+Simply, install `p99` with the node package manager:
 
 ```sh
-$ npm install c99
+$ npm install p99
 ```
 
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+## Usage
+Once installed use the command p99 to launch the interface.
+```sh
+$ p99
 ```
-Give an example
-```
+<p align="center">
+  <img src="./static/images/c99menuClean.png" alt="c99 logo">
+</p>
 
-### And coding style tests
+* Search for items
+<p align="center">
+  <img src="./static/images/c99ItemSearch.png" alt="c99 logo">
+</p>
 
-Explain what these tests test and why
+* View auction data
+<p align="center">
+  <img src="./static/images/c99AuctionData.png" alt="c99 logo">
+</p>
 
-```
-Give an example
-```
+* Search auctions by seller 
+<p align="center">
+  <img src="./static/images/c99Seller.png" alt="c99 logo">
+</p>
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
-
+#
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [inquirer](https://www.npmjs.com/package/inquirer)  
+* [CLI-table](https://www.npmjs.com/package/cli-table)
+* [axios](https://www.npmjs.com/package/axios) 
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
