@@ -30,28 +30,13 @@ $ c99
   <img src="./static/images/c99menuClean.png" alt="c99 logo">
 </p>
 
+* Search for items
+<p align="center">
+  <img src="./static/images/c99ItemSearch.png" alt="c99 logo">
+</p>
 
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+#
 ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
