@@ -1,21 +1,21 @@
 {
-  "name": "c99",
+  "name": "p99",
   "version": "1.0.1",
   "description": "",
   "bin": {
-    "c99": "bin/c99"
+    "p99": "bin/p99"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/425devon/c99.git"
+    "url": "git+https://github.com/425devon/p99.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/425devon/c99/issues"
+    "url": "https://github.com/425devon/p99/issues"
   },
-  "homepage": "https://github.com/425devon/c99#readme",
+  "homepage": "https://github.com/425devon/p99#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "chalk": "^2.4.1",
