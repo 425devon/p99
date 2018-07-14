@@ -15,8 +15,8 @@ module.exports = async () =>{
         const getName = await seller();
         require('../cmnds/seller')(getName.name);
         break;
-        case 'Get help':
-        require('../cmnds/help')
+        case 'About':
+        require('../cmnds/about')();
         break;
         case 'See version':
         require('../cmnds/version')();
