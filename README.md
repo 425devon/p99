@@ -34,6 +34,7 @@ $ c99
 <p align="center">
   <img src="./static/images/c99ItemSearch.png" alt="c99 logo">
 </p>
+
 * View auction data
 <p align="center">
   <img src="./static/images/c99AuctionData.png" alt="c99 logo">
