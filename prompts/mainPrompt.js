@@ -8,7 +8,7 @@ module.exports ={
             name: 'menuChoice',
             type: 'list',
             message: `Please choose from the following:`,
-            choices:['Search for item','Search auctions by seller','See version','Get help', 'Exit'],
+            choices:['Search for item','Search auctions by seller','See version','About', 'Exit'],
             default: 0,
           }
     ];
