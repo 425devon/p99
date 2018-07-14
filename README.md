@@ -6,19 +6,31 @@ The official CLI for www.P99market.com
   <img src="./static/images/c99Logo.png" alt="c99 logo">
 </p>
 
-### Installing
-Simply, install `c99`:
+## Description
+c99 provides a clean and efficient command line interface for:
+* Auto-completed search for items
+* Current auction data for items
+* Search auctions by seller
+
+
+## Installing
+Simply, install `c99` with the node package manager:
 
 ```sh
 $ npm install c99
 ```
 
 
-End with an example of getting some data out of the system or using it for a little demo
+## Usage
+Once installed use the command c99 to launch the interface.
+```sh
+$ c99
+```
+<p align="center">
+  <img src="./static/images/c99menuClean.png" alt="c99 logo">
+</p>
 
-## Running the tests
 
-Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
 
